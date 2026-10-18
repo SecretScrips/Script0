@@ -1,0 +1,392 @@
+function YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO(code)res=''for i in ipairs(code)do res=res..string.char(code[i]/105)end return res end 
+
+
+local Players = game:GetService(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8400,11340,10185,12705,10605,11970,12075}))
+local UIS = game:GetService(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8925,12075,10605,11970,7665,11550,11760,12285,12180,8715,10605,11970,12390,11025,10395,10605}))
+local player = Players.LocalPlayer
+
+local gui = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8715,10395,11970,10605,10605,11550,7455,12285,11025}))
+gui.Name = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7350,11025,12600,7560,12285,10290,8085,11025,11550,11025})
+gui.ResetOnSpawn = false
+gui.IgnoreGuiInset = true
+gui.Parent = game:GetService(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8400,11340,10185,12705,10605,11970,12075})).LocalPlayer:WaitForChild(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8400,11340,10185,12705,10605,11970,7455,12285,11025}))
+
+local AZUL = Color3.fromRGB(100, 180, 255)
+local FUNDO = Color3.fromRGB(14, 16, 24)
+local PAINEL = Color3.fromRGB(22, 26, 38)
+local CARD = Color3.fromRGB(28, 34, 50)
+local ATIVO = Color3.fromRGB(30, 70, 100)
+local TEXTO = Color3.fromRGB(240, 245, 255)
+local VERDE = Color3.fromRGB(80, 230, 140)
+local RED = Color3.fromRGB(255, 90, 110)
+
+local function Round(obj, r)
+    local c = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8925,7665,7035,11655,11970,11550,10605,11970}))
+    c.CornerRadius = UDim.new(0, r or 8)
+    c.Parent = obj
+end
+
+-- BOTÃO DE ABRIR (Setinha)
+local tab = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8820,10605,12600,12180,6930,12285,12180,12180,11655,11550}))
+tab.Size = UDim2.new(0, 50, 0, 50)
+tab.Position = UDim2.new(1, -70, 0.5, 0)
+tab.BackgroundColor3 = CARD
+tab.Text = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({25200,16695,15540,13755})
+tab.TextColor3 = AZUL
+tab.Font = Enum.Font.GothamBold
+tab.TextSize = 24
+tab.Parent = gui
+Round(tab, 25)
+
+-- PAINEL COMPACTO
+local painel = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7350,11970,10185,11445,10605}))
+painel.Size = UDim2.new(0, 340, 0, 240) 
+painel.Position = UDim2.new(0.5, -170, 0, -280)
+painel.BackgroundColor3 = FUNDO
+painel.Visible = false
+painel.Parent = gui
+Round(painel, 8)
+
+local top = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7350,11970,10185,11445,10605}))
+top.Size = UDim2.new(1, 0, 0, 32)
+top.BackgroundColor3 = PAINEL
+top.Parent = painel
+Round(top, 8)
+
+local title = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8820,10605,12600,12180,7980,10185,10290,10605,11340}))
+title.Size = UDim2.new(1, -40, 1, 0)
+title.Position = UDim2.new(0, 10, 0, 0)
+title.BackgroundTransparency = 1
+title.Text = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7350,7665,9240,3360,7560,8925,6930,3360,9555,6930,7245,8820,6825,9765})
+title.TextColor3 = TEXTO
+title.Font = Enum.Font.GothamBold
+title.TextSize = 12
+title.TextXAlignment = Enum.TextXAlignment.Left
+title.Parent = top
+
+local fechar = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8820,10605,12600,12180,6930,12285,12180,12180,11655,11550}))
+fechar.Size = UDim2.new(0, 22, 0, 22)
+fechar.Position = UDim2.new(1, -28, 0, 5)
+fechar.BackgroundColor3 = RED
+fechar.Text = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({12600})
+fechar.TextColor3 = Color3.new(1, 1, 1)
+fechar.Font = Enum.Font.GothamBold
+fechar.TextSize = 12
+fechar.Parent = top
+Round(fechar, 6)
+
+local abaHolder = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7350,11970,10185,11445,10605}))
+abaHolder.Size = UDim2.new(1, -20, 0, 24)
+abaHolder.Position = UDim2.new(0, 10, 0, 40)
+abaHolder.BackgroundTransparency = 1
+abaHolder.Parent = painel
+
+local listAbas = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8925,7665,7980,11025,12075,12180,7980,10185,12705,11655,12285,12180}))
+listAbas.FillDirection = Enum.FillDirection.Horizontal
+listAbas.Padding = UDim.new(0, 4)
+listAbas.Parent = abaHolder
+
+local scroll = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8715,10395,11970,11655,11340,11340,11025,11550,10815,7350,11970,10185,11445,10605}))
+scroll.Size = UDim2.new(1, -20, 1, -72)
+scroll.Position = UDim2.new(0, 10, 0, 68)
+scroll.BackgroundTransparency = 1
+scroll.AutomaticCanvasSize = Enum.AutomaticSize.Y
+scroll.CanvasSize = UDim2.new(0, 0, 0, 0)
+scroll.Parent = painel
+
+local listContent = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8925,7665,7980,11025,12075,12180,7980,10185,12705,11655,12285,12180}))
+listContent.Padding = UDim.new(0, 4)
+listContent.Parent = scroll
+
+local abas, btnsAba = {}, {}
+
+local function NovaAba(nome)
+    local b = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8820,10605,12600,12180,6930,12285,12180,12180,11655,11550}))
+    b.Size = UDim2.new(0, 80, 1, 0)
+    b.BackgroundColor3 = CARD
+    b.Text = nome
+    b.TextColor3 = AZUL
+    b.Font = Enum.Font.GothamSemibold
+    b.TextSize = 10
+    b.Parent = abaHolder
+    Round(b, 4)
+
+    local frame = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7350,11970,10185,11445,10605}))
+    frame.Size = UDim2.new(1, 0, 0, 0)
+    frame.AutomaticSize = Enum.AutomaticSize.Y
+    frame.BackgroundTransparency = 1
+    frame.Visible = false
+    frame.Parent = scroll
+
+    local l = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8925,7665,7980,11025,12075,12180,7980,10185,12705,11655,12285,12180}))
+    l.Padding = UDim.new(0, 4)
+    l.Parent = frame
+
+    abas[nome], btnsAba[nome] = frame, b
+
+    b.MouseButton1Click:Connect(function()
+        for _, f in pairs(abas) do f.Visible = false end
+        for _, bt in pairs(btnsAba) do bt.BackgroundColor3 = CARD bt.TextColor3 = AZUL end
+        frame.Visible = true
+        b.BackgroundColor3 = AZUL
+        b.TextColor3 = TEXTO
+    end)
+    return frame
+end
+
+local function AddTitle(parent, txt)
+    local lbl = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8820,10605,12600,12180,7980,10185,10290,10605,11340}))
+    lbl.Size = UDim2.new(1, 0, 0, 16)
+    lbl.BackgroundTransparency = 1
+    lbl.Text = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({6510,3360}) .. txt
+    lbl.TextColor3 = AZUL
+    lbl.Font = Enum.Font.GothamBold
+    lbl.TextSize = 9
+    lbl.TextXAlignment = Enum.TextXAlignment.Left
+    lbl.Parent = parent
+end
+
+local function AddToggle(parent, txt, padrao, cb)
+    local card = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7350,11970,10185,11445,10605}))
+    card.Size = UDim2.new(1, 0, 0, 32)
+    card.BackgroundColor3 = padrao and ATIVO or CARD
+    card.Parent = parent
+    Round(card, 6)
+
+    local l = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8820,10605,12600,12180,7980,10185,10290,10605,11340}))
+    l.Size = UDim2.new(1, -50, 1, 0)
+    l.Position = UDim2.new(0, 10, 0, 0)
+    l.BackgroundTransparency = 1
+    l.Text = txt
+    l.TextColor3 = TEXTO
+    l.Font = Enum.Font.GothamSemibold
+    l.TextSize = 10
+    l.TextXAlignment = Enum.TextXAlignment.Left
+    l.Parent = card
+
+    local bg = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7350,11970,10185,11445,10605}))
+    bg.Size = UDim2.new(0, 28, 0, 14)
+    bg.Position = UDim2.new(1, -36, 0.5, -7)
+    bg.BackgroundColor3 = padrao and VERDE or Color3.fromRGB(60, 60, 70)
+    bg.Parent = card
+    Round(bg, 7)
+
+    local knob = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7350,11970,10185,11445,10605}))
+    knob.Size = UDim2.new(0, 10, 0, 10)
+    knob.Position = padrao and UDim2.new(1, -12, 0.5, -5) or UDim2.new(0, 2, 0.5, -5)
+    knob.BackgroundColor3 = Color3.new(1, 1, 1)
+    knob.Parent = bg
+    Round(knob, 5)
+
+    local btn = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8820,10605,12600,12180,6930,12285,12180,12180,11655,11550}))
+    btn.Size = UDim2.new(1, 0, 1, 0)
+    btn.BackgroundTransparency = 1
+    btn.Text = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({})
+    btn.Parent = card
+
+    local state = padrao
+    btn.MouseButton1Click:Connect(function()
+        state = not state
+        card.BackgroundColor3 = state and ATIVO or CARD
+        bg.BackgroundColor3 = state and VERDE or Color3.fromRGB(60, 60, 70)
+        knob.Position = state and UDim2.new(1, -12, 0.5, -5) or UDim2.new(0, 2, 0.5, -5)
+        if cb then cb(state) end
+    end)
+    return { set = function(v)
+        state = v
+        card.BackgroundColor3 = state and ATIVO or CARD
+        bg.BackgroundColor3 = state and VERDE or Color3.fromRGB(60, 60, 70)
+        knob.Position = state and UDim2.new(1, -12, 0.5, -5) or UDim2.new(0, 2, 0.5, -5)
+        if cb then cb(state) end
+    end }
+end
+
+local function AddBtn(parent, txt, cb)
+    local b = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8820,10605,12600,12180,6930,12285,12180,12180,11655,11550}))
+    b.Size = UDim2.new(1, 0, 0, 32)
+    b.BackgroundColor3 = CARD
+    b.Text = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({3360,3360}) .. txt
+    b.TextColor3 = TEXTO
+    b.Font = Enum.Font.GothamSemibold
+    b.TextSize = 10
+    b.TextXAlignment = Enum.TextXAlignment.Left
+    b.Parent = parent
+    Round(b, 6)
+
+    b.MouseButton1Click:Connect(function()
+        local ok = cb and cb() or true
+        if ok == true then
+            b.BackgroundColor3 = VERDE
+            b.Text = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({3360,3360,8295,7875,3465})
+            task.wait(1)
+            b.BackgroundColor3 = CARD
+            b.Text = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({3360,3360}) .. txt
+        elseif ok == false then
+            b.BackgroundColor3 = RED
+            b.Text = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({3360,3360,7245,11970,11970,11655,11970,3465})
+            task.wait(1)
+            b.BackgroundColor3 = CARD
+            b.Text = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({3360,3360}) .. txt
+        end
+    end)
+    return b
+end
+
+local isOpen = false
+tab.MouseButton1Click:Connect(function()
+    isOpen = not isOpen
+    painel.Visible = isOpen
+    painel.Position = isOpen and UDim2.new(0.5, -170, 0, 60) or UDim2.new(0.5, -170, 0, -280)
+end)
+
+fechar.MouseButton1Click:Connect(function()
+    isOpen = false
+    painel.Visible = false
+    painel.Position = UDim2.new(0.5, -170, 0, -280)
+end)
+
+local dragging, dragStart, startPos
+top.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = painel.Position
+    end
+end)
+UIS.InputChanged:Connect(function(input)
+    if dragging and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+        local delta = input.Position - dragStart
+        painel.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+end)
+UIS.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = false
+    end
+end)
+
+local autoOn, posSalva = false, nil
+local teleportados = setmetatable({}, {__mode = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({11235})})
+
+local function checkLog(obj)
+    return obj and obj.Parent and obj:IsA(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({6930,10185,12075,10605,8400,10185,11970,12180})) and not obj.Anchored and string.lower(obj.Name):find(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({11340,11655,10815})) ~= nil
+end
+
+local function tpLog(log)
+    pcall(function() log:SetNetworkOwner(player) end)
+    pcall(function() log.CFrame = CFrame.new(posSalva) end)
+    pcall(function() log.AssemblyLinearVelocity = Vector3.zero log.AssemblyAngularVelocity = Vector3.zero end)
+end
+
+task.spawn(function()
+    while true do
+        if autoOn and posSalva then
+            for _, o in ipairs(workspace:GetDescendants()) do
+                if not autoOn then break end
+                if checkLog(o) and not teleportados[o] then
+                    teleportados[o] = true
+                    tpLog(o)
+                end
+            end
+            task.wait(0.3)
+        else
+            task.wait(0.5)
+        end
+    end
+end)
+
+local function findTree()
+    for _, o in ipairs(workspace:GetDescendants()) do
+        local n = string.lower(o.Name)
+        if (n:find(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({11340,10185,11970,10815,10605,12180,11970,10605,10605})) or n:find(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({11340,10185,11970,10815,10605,9975,12180,11970,10605,10605}))) and (o:IsA(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8085,11655,10500,10605,11340})) or o:IsA(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({6930,10185,12075,10605,8400,10185,11970,12180}))) then
+            local p = o:IsA(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8085,11655,10500,10605,11340})) and o:GetPivot().Position or o.Position
+            if p then return {model = o, pos = p} end
+        end
+    end
+    return nil
+end
+
+local function tpTo(pos)
+    local c = player.Character
+    local r = c and c:FindFirstChild(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7560,12285,11445,10185,11550,11655,11025,10500,8610,11655,11655,12180,8400,10185,11970,12180}))
+    if r then r.CFrame = CFrame.new(pos) return true end
+    return false
+end
+
+local abaMain = NovaAba(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8085,10185,11025,11550}))
+AddTitle(abaMain, YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8715,6825,9030,7245,3360,9135,8295,8295,7140}))
+AddBtn(abaMain, YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8715,10185,12390,10605,3360,8400,11655,12075,11025,12180,11025,11655,11550}), function()
+    local c = player.Character
+    local r = c and c:FindFirstChild(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7560,12285,11445,10185,11550,11655,11025,10500,8610,11655,11655,12180,8400,10185,11970,12180}))
+    if r then posSalva = r.Position return true end
+    return false
+end)
+AddBtn(abaMain, YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8820,8400,3360,12180,11655,3360,8715,10185,12390,10605,10500}), function()
+    if posSalva then return tpTo(posSalva) end
+    return false
+end)
+
+AddTitle(abaMain, YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8820,8400,3360,9135,8295,8295,7140}))
+local togAuto = AddToggle(abaMain, YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({6825,12285,12180,11655,3360,9135,11655,11655,10500}), false, function(s)
+    if s then
+        if not posSalva then togAuto.set(false) return end
+        autoOn = true
+        teleportados = setmetatable({}, {__mode = YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({11235})})
+    else
+        autoOn = false
+    end
+end)
+AddBtn(abaMain, YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8820,8400,3360,7980,10185,11970,10815,10605,8820,11970,10605,10605}), function()
+    local t = findTree()
+    if t then return tpTo(t.pos + Vector3.new(0, 5, 0)) end
+    return false
+end)
+
+local abaVis = NovaAba(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({9030,11025,12075,12285,10185,11340,12075}))
+AddTitle(abaVis, YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7245,8715,8400}))
+local espL, espT = false, false
+local cL, cT = Color3.fromRGB(255, 200, 80), Color3.fromRGB(80, 230, 140)
+local espH = {}
+
+local function clearESP()
+    for _, h in pairs(espH) do pcall(function() h:Destroy() end) end
+    espH = {}
+end
+
+local function updESP()
+    clearESP()
+    if not espL and not espT then return end
+    for _, o in ipairs(workspace:GetDescendants()) do
+        local n = string.lower(o.Name)
+        local alvo, cor = false, cL
+        if espL and o:IsA(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({6930,10185,12075,10605,8400,10185,11970,12180})) and n:find(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({11340,11655,10815})) then
+            alvo = true
+        elseif espT and (o:IsA(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8085,11655,10500,10605,11340})) or o:IsA(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({6930,10185,12075,10605,8400,10185,11970,12180}))) and (n:find(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({11340,10185,11970,10815,10605,12180,11970,10605,10605})) or n:find(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({11340,10185,11970,10815,10605,9975,12180,11970,10605,10605}))) then
+            alvo = true
+            cor = cT
+        end
+        if alvo then
+            local hl = Instance.new(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7560,11025,10815,10920,11340,11025,10815,10920,12180}))
+            hl.FillColor = cor
+            hl.OutlineColor = cor
+            hl.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+            hl.Adornee = o
+            hl.Parent = gui
+            table.insert(espH, hl)
+        end
+    end
+end
+
+AddToggle(abaVis, YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7245,8715,8400,3360,7980,11655,10815}), false, function(s) espL = s updESP() end)
+AddToggle(abaVis, YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({7245,8715,8400,3360,8820,11970,10605,10605}), false, espT)
+
+task.spawn(function()
+    while gui.Parent do
+        if espL or espT then updESP() task.wait(1) else task.wait(0.5) end
+    end
+end)
+
+abas[YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8085,10185,11025,11550})].Visible = true
+btnsAba[YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8085,10185,11025,11550})].BackgroundColor3 = AZUL
+btnsAba[YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({8085,10185,11025,11550})].TextColor3 = TEXTO
+print(YVzYITjFHPRGaLfhcToulauqCKNVloyzUmGDMOBwCBRUOIytfTqkpSqQnoXqO({9555,7350,7665,9240,3360,7560,8925,6930,9765,3360,7980,11655,10185,10500,10605,10500,3465}))    
